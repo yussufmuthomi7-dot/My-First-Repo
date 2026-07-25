@@ -49,7 +49,7 @@
     <br>
     <button onclick="newCaption()">Get Caption</button>
     <p id="caption"></p>
-
+    <p id="counter" style="font-size:16px; opacity:0.8;"></p>
     <script>
         const captions = [
             "POV: You started learning AI on your phone 💪",
@@ -63,6 +63,10 @@
         function newCaption() {
             const random = Math.floor(Math.random() * captions.length);
             document.getElementById("caption").innerText = captions[random];
+            let count = localStorage.getItem('captionCount') || 0;
+   count++;
+   localStorage.setItem('captionCount', count);
+   document.getElementById("counter").innerText = count + " people got captions today 🔥";
         }
     </script>
 </body>
