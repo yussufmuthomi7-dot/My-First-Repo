@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My AI TikTok Page</title>
+    <title>@yussufyusqa - AI Website</title>
     <style>
         body {
-            background: linear-gradient(pink, purple);
+            background: linear-gradient(#000, #FF0050);
             color: white;
             text-align: center;
             font-family: Arial;
-            padding: 50px;
+            padding: 50px 20px;
             min-height: 100vh;
         }
-        h1 { font-size: 40px; }
+        h1 { font-size: 36px; margin-bottom: 10px; }
+       .tiktok-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            background: #FF0050;
+            color: white;
+            margin: 15px 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
         button {
             padding: 15px 30px;
             font-size: 20px;
@@ -23,21 +35,28 @@
             margin-top: 20px;
             font-weight: bold;
         }
-        #caption { font-size: 24px; margin-top: 30px; }
+        #caption { font-size: 22px; margin-top: 30px; min-height: 60px; }
     </style>
 </head>
 <body>
     <h1>Follow @yussufyusqa 🚀</h1>
-    <p>Tap the button for a TikTok caption idea</p>
+    <p>Building with AI on my phone</p>
+    
+    <a href="https://tiktok.com/@yussufyusqa" class="tiktok-btn">Follow Me on TikTok</a>
+    
+    <br>
     <button onclick="newCaption()">Get Caption</button>
     <p id="caption"></p>
 
     <script>
         const captions = [
             "POV: You started learning AI on your phone 💪",
-            "Day 1 of building with AI #coding",
+            "Day 1 of building with AI #coding #ai",
             "From zero to website in 30 minutes 🔥",
-            "Comment 'AI' if you want the tutorial!"
+            "Comment 'AI' if you want the tutorial!",
+            "Built this whole site on my phone 😱",
+            "AI is the future and I'm learning it 🚀",
+            "Follow for more AI tutorials @yussufyusqa"
         ];
         function newCaption() {
             const random = Math.floor(Math.random() * captions.length);
