@@ -2,20 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First AI Page</title>
+    <title>My AI TikTok Page</title>
     <style>
         body {
             background: linear-gradient(pink, purple);
             color: white;
             text-align: center;
             font-family: Arial;
-            padding-top: 100px;
+            padding: 50px;
+            min-height: 100vh;
         }
-        h1 { font-size: 50px; }
+        h1 { font-size: 40px; }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            background: yellow;
+            color: black;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #caption { font-size: 24px; margin-top: 30px; }
     </style>
 </head>
 <body>
-    <h1>Hello! I'm Learning AI</h1>
-    <p>Follow me on TikTok Live 🔥</p>
+    <h1>I'm Learning AI 🚀</h1>
+    <p>Tap the button for a TikTok caption idea</p>
+    <button onclick="newCaption()">Get Caption</button>
+    <p id="caption"></p>
+
+    <script>
+        const captions = [
+            "POV: You started learning AI on your phone 💪",
+            "Day 1 of building with AI #coding",
+            "From zero to website in 30 minutes 🔥",
+            "Comment 'AI' if you want the tutorial!"
+        ];
+        function newCaption() {
+            const random = Math.floor(Math.random() * captions.length);
+            document.getElementById("caption").innerText = captions[random];
+        }
+    </script>
 </body>
 </html>
